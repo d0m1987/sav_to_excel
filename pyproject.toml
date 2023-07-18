@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "sav-to-excel"
+version = "0.1.0"
+description = ""
+authors = ["Dominic <dominic.buehler@gmx.de>"]
+readme = "README.md"
+packages = [{ include = "sav_to_excel" }]
+
+[tool.poetry.scripts]
+sav_to_excel = "sav_to_excel.main:app"
+
+[tool.poetry.dependencies]
+python = "<3.13,>=3.8"
+typer = { extras = ["all"], version = "^0.9.0" }
+pandas = "^2.0.3"
+openpyxl = "^3.1.2"
+pyreadstat = "^1.2.2"
+pytest = "^7.4.0"
+pyinstaller = "^5.13.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
